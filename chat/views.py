@@ -8,7 +8,7 @@ def index(request):
     chat_rooms = ChatRoom.objects.order_by('name')[:5]
     context = {
             'chat_list': chat_rooms,
-            }
+    }
     return render(request, 'chats/index.html', context)
 
 
